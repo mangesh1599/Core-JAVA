@@ -1408,3 +1408,78 @@ public class MyClass
 
 Output-
 25 3
+	
+	
+	
+30)Find Sadal Point
+
+public class MyClass
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int[][] a=
+		{
+			{
+				6,3,9
+			}
+			,
+			{
+				9,7,8
+			}
+			,
+			{
+				2,4,5
+			}
+			,
+		}
+		;
+		myCode(a);
+	}
+	//EndOfMainMethod
+	private static void myCode(int[][] a) 
+	{
+		int cnt=0;
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=0;j<a[i].length;j++)
+			{
+				boolean row=smallestRow(a,i,j);
+				boolean col=largestCol(a,i,j);
+				if(row==true && col==true)
+				{
+					System.out.println(a[i][j]);
+					cnt++;
+				}
+			}
+		}
+		if(cnt==0)
+		{
+			System.out.println("no saddle");
+		}
+	}
+	public static boolean smallestRow(int[][]a,int i,int j)
+	{
+		for(int k=0;k<a.length;k++)
+		{
+			if(a[i][k]<a[i][j])
+			return false;
+		}
+		return true;
+	}
+	public static boolean largestCol(int [][]a,int i,int j)
+	{
+		for(int k=0;k<a.length;k++)
+		{
+			if(a[k][j]>a[i][j])
+			return false;
+		}
+		return true;
+	}
+}
+
+
+Output-
+	7
+	
+---------------------------------------------------------------------------------------------------------------------------------------------------
