@@ -1287,3 +1287,70 @@ Output-
 4 3
 -2 9
 
+
+28)Remove 1st from 2nd elements in Array
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int[] a = 
+		{
+			1,1,1,1,1,2,2,3,4,4,4
+		}
+		;
+		int[] b= 
+		{
+			1,2,4
+		}
+		;
+		myCode(a,b);
+	}
+	//EndOfMainMethod
+	private static void myCode(int[] a,int[] b) 	
+	{
+		//WriteCode Here
+		int []num=
+		{
+			1,2,4
+		}
+		;
+		for(int j=0;j<num.length;j++)
+		{
+			int cnt=0;
+			for(int i=0;i<a.length;i++)
+			{
+				if(a[i]==num[j])
+				{
+					cnt++;
+				}
+			}
+			if(cnt>2)
+			cnt=2;
+			b=new int[a.length-cnt];
+			int index=0;
+			int cnt2=0;
+			for(int i=0;i<a.length;i++)
+			{
+				if(a[i]!=num[j] || cnt2==2)
+				{
+					b[index++]=a[i];
+				}
+				else
+				{
+					cnt2++;
+				}
+			}
+			a=b;
+		}
+		for(int i=0;i<b.length;i++)
+		{
+			System.out.print(b[i]+" ");
+		}
+	}
+}
+
+
+Output-
+	1 1 1 3 4
