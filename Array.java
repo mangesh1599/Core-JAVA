@@ -825,7 +825,7 @@ Sum of Diagonal is : 11
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
-20)Find Sum and Average of diagonal Matrix
+20)Find Sum and Average of non diagonal Matrix
 
 public class MyClass 
 {
