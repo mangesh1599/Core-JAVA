@@ -1163,62 +1163,9 @@ public class MyClass
 Output:-
 	37 7 90 20 5 50 40
 	
- 
-26)
-
-public class MyClass 
-{
-	//StartOfMainMethod
-	public static void main(String[] args) 
-	{
-		int[][] a= 
-		{
-			{
-				1,2,3,4
-			}
-			,
-			{
-				5,6,7,8
-			}
-			,
-			{
-				9,4,2,5
-			}
-			,
-			{
-				7,2,4,9
-			}
-		}
-		;
-		myCode(a);
-	}
-	//EndOfMainMethod
-	private static void myCode(int[][] a) 
-	{
-		//WriteCode Here
-		int sum=0;
-		int cnt=0;
-		for(int i=0;i<a.length;i++)
-		{
-			for(int j=0;j<a[i].length;j++)
-			{
-				if(i!=0 && j!=0 && i!=a.length-1 && j!=a.length-1)
-				{
-					sum=sum+a[i][j];
-					cnt++;
-				}
-			}
-		}
-		double avg=sum/cnt;
-		System.out.println(sum);
-	}
-}
-
-Output-
-19
+----------------------------------------------------------------------------------------------------------------------------------------------
 	
-	
-27)Average of inner element in 2D array
+26)Average of inner element in 2D array
 
 public class MyClass 
 {
@@ -1274,7 +1221,7 @@ Output-
 4.0
 	
 	
-28)Find Unique pair of given element
+27)Find Unique pair of given element
 
 public class MyClass 
 {
