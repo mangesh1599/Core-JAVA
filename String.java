@@ -273,33 +273,44 @@ Abcd
 ------------------------------------------------------------------------------------------------------------------------------
 	
 
-9)	sum Of The Digits Present In The Given String
-
+9)replace D with F	
+	
+	
+import java.util.Arrays;
+import java.util.Iterator;
 public class MyClass 
 {
 	//StartOfMainMethod
 	public static void main(String[] args) 
 	{
-		String s1="a2ba1ca3d";
-		myCode(s1);
+		String s1 = "dddaa";
+		char ch1='d';
+		char ch2='f';
+		myCode(s1,ch1,ch2);
 	}
 	//EndOfMainMethod
-	private static void myCode(String s1) 
+	private static void myCode(String s1,char ch1,char ch2) 
 	{
-		//WriteCode Here
-		int sum=0;
+		//write code here
+		String s="";
 		for(int i=0;i<s1.length();i++)
 		{
-			char ch=s1.charAt(i);
-			if(ch>'0' && ch<'9')
-			sum=sum+ch-48;
+			if(s1.charAt(i)==ch1)
+			{
+				s=s+ch2;
+			}
+			else
+			{
+				s=s+s1.charAt(i);
+			}
 		}
-		System.out.println(sum);
+		System.out.println(s);
 	}
 }
-
+			
+			
 Output-
-6
+        fffaa
 	
 --------------------------------------------------------------------------------------------------------------------------------------	
 	
