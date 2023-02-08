@@ -475,3 +475,44 @@ abcfed
 Output-
 4
 abcd
+	
+	
+	
+	
+14)sort Numbers In A String.
+		
+import java.util.Arrays;
+import java.util.Iterator;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 = "43521";
+		myCode(s1);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1) 
+	{
+		//WriteCode Here
+		char []s2=s1.toCharArray();
+		for(int i=0;i<s2.length;i++)
+		{
+			for(int j=i+1;j<s2.length;j++)
+			{
+				if(s2[i]>s2[j])
+				{
+					char temp=s2[i];
+					s2[i]=s2[j];
+					s2[j]=temp;
+				}
+			}
+		}
+		s1=new String(s2);
+		System.out.println(s1);
+	}
+}
+
+
+Outpur-
+	12345
