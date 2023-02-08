@@ -425,3 +425,53 @@ public class MyClass
 
 Output-
 abcfed
+	
+	
+	
+13)print All The Duplicates In  TheInput String
+	
+	
+	public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 ="abcdabcd";
+		myCode(s1);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1) 
+	{
+		//write code here
+		int cnt=0;
+		for(int i=0;i<s1.length();i++)
+		{
+			for(int j=i+1;j<s1.length();j++)
+			{
+				if(s1.charAt(i)==s1.charAt(j))
+				{
+					cnt++;
+					break;
+				}
+			}
+		}
+		System.out.println(cnt);
+		char[]c=s1.toCharArray();
+		for(int i=0;i<c.length;i++)
+		{
+			for(int j=i+1;j<c.length;j++)
+			{
+				if(c[i]==c[j])
+				{
+					System.out.print(c[i]);
+					break;
+				}
+			}
+		}
+	}
+}
+			
+			
+Output-
+4
+abcd
