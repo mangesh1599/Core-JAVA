@@ -608,3 +608,44 @@ Output-
 			
 Output-
 	false
+	
+	
+
+17)reverse Every Word In AS tring
+	
+	
+import java.util.Iterator;
+import java.util.Arrays;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 = "I am a good boy";
+		myCode(s1);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1) 
+	{
+		//WriteCode Here
+		String []s2=s1.split(" ");
+		for(int i=0;i<s2.length;i++)
+		{
+			String s3=s2[i];
+			String s4="";
+			for(int j=0;j<s3.length();j++)
+			{
+				s4=s3.charAt(j)+s4;
+			}
+			s2[i]=s4;
+		}
+		for(int i=0;i<s2.length;i++)
+		{
+			System.out.print(s2[i]+"  ");
+		}
+	}
+}
+			
+			
+Output-
+	I  ma  a  doog  yob  
