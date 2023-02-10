@@ -649,3 +649,46 @@ public class MyClass
 			
 Output-
 	I  ma  a  doog  yob  
+	
+	
+	
+18)	remove duplicate print unique count
+	
+	
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int[] a = 
+		{
+			2,1,5,4,3,2,1,6,4,2
+		}
+		;
+		myCode(a);
+	}
+	//EndOfMainMethod
+	private static void myCode(int[] a) 	
+	{
+		//WriteCode Here
+		int count=0;
+		for(int i=0;i<a.length;i++)
+		{
+			int cnt=0;
+			for(int j=i+1;j<a.length;j++)
+			{
+				if(a[i]==a[j])
+				cnt++;
+			}
+			if(cnt==0)
+			{
+				count++;
+			}
+		}
+		System.out.println("new length of array : "+count);
+	}
+}
+			
+
+Output-
+	new length of array : 6
