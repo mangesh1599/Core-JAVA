@@ -752,4 +752,64 @@ public class MyClass
 Output-
 	1
 	w
+	
+	
+	
+	
+20)Maximum Frequency Of String Character
+	
+import java.util.Arrays;
+import java.util.Iterator;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 = "abcaabcb";
+		myCode(s1);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1) 
+	{
+		//Write code here
+		char []a=s1.toCharArray();
+		int max=0;
+		char ch=0;
+		for(int i=0;i<a.length;i++)
+		{
+			int cnt=0;
+			for(int j=0;j<i;j++)
+			{
+				if(a[i]==a[j])
+				{
+					cnt++;
+				}
+			}
+			int cnt1=0;
+			for(int j=0;j<a.length;j++)
+			{
+				if(a[i]==a[j])
+				{
+					cnt1++;
+				}
+			}
+			if(cnt==0)
+			{
+				if(cnt1>max)
+				{
+					max=cnt1;
+					ch=a[i];
+				}
+			}
+		}
+		System.out.println(max);
+		System.out.println(ch);
+	}
+}
+			
+			
+			
+Output-
+	3
+	a
 
