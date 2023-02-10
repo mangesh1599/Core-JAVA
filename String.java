@@ -692,3 +692,64 @@ public class MyClass
 
 Output-
 	new length of array : 6
+		
+		
+		
+		
+19)lowest Frequency Of String Character 
+		
+		
+import java.util.Arrays;
+import java.util.Iterator;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 = "weLcome";
+		myCode(s1);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1) 
+	{
+		char [] a=s1.toCharArray();
+		char ch=0;
+		int min=Integer.MAX_VALUE;;
+		for(int i=0;i<a.length;i++)
+		{
+			int cnt=0;
+			for(int j=0;j<i;j++)
+			{
+				if(a[i]==a[j])
+				{
+					cnt++;
+				}
+			}
+			int cnt1=0;
+			for(int j=0;j<a.length;j++)
+			{
+				if(a[i]==a[j])
+				{
+					cnt1++;
+				}
+			}
+			if(cnt==0)
+			{
+				if(cnt1<min)
+				{
+					min=cnt1;
+					ch=a[i];
+				}
+			}
+		}
+		System.out.println(min);
+		System.out.println(ch);
+	}
+}
+			
+			
+			
+Output-
+	1
+	w
+
