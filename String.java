@@ -875,3 +875,64 @@ public class MyClass
 Output-
 	b 1
 
+
+	
+22)Second Most Frequent Char
+	
+import java.util.Arrays;
+import java.util.Iterator;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 = "abcad";
+		myCode(s1);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1) 
+	{
+		//write code here
+		char []a=s1.toCharArray();
+		int max=0;
+		char ch=0;
+		int max2=0;
+		for(int i=0;i<a.length;i++)
+		{
+			int cnt=0;
+			for(int j=0;j<i;j++)
+			{
+				if(a[i]==a[j])
+				{
+					cnt++;
+				}
+			}
+			int cnt1=0;
+			for(int j=0;j<a.length;j++)
+			{
+				if(a[i]==a[j])
+				{
+					cnt1++;
+				}
+			}
+			if(cnt==0)
+			{
+				if(cnt1>max)
+				{
+					max=cnt1;
+				}
+				if(cnt1>max2 && cnt1!=max)
+				{
+					max2=cnt1;
+					ch=a[i];
+				}
+			}
+		}
+		System.out.println(ch+" "+max2);
+	}
+}
+
+			
+			
+Output-
+	b 1
