@@ -936,3 +936,48 @@ public class MyClass
 			
 Output-
 	b 1
+	
+	
+	
+	
+
+23)finLargest & Smallest Word In AString.
+	
+	
+import java.util.Arrays;
+import java.util.Iterator;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 = "welcome to hefshine soft pvt ltd";
+		myCode(s1);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1) 
+	{
+		//WriteCode Here
+		String [] a=s1.split(" ");
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=i+1;j<a.length;j++)
+			{
+				if(a[i].length()>a[j].length())
+				{
+					String temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+		}
+		System.out.println("smallest word : "+a[0]);
+		System.out.println("largest word: "+a[a.length-1]);
+	}
+}
+			
+			
+			
+Output-
+       smallest word : to
+       largest word: hefshine
