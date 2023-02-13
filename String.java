@@ -981,3 +981,39 @@ public class MyClass
 Output-
        smallest word : to
        largest word: hefshine
+	       
+	       
+	       
+	       
+	       
+24)Get The Character At TheG iven Index
+	       
+	         
+	       public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 ="abcd";
+		int index=3;
+		myCode(s1,index);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1,int index) 
+	{
+		//write code here
+		char []a=s1.toCharArray();
+		if(index<a.length)
+		{
+			System.out.println(a[index]);
+		}
+		else
+		{
+			System.out.println("out of range index");
+		}
+	}
+}
+
+			
+Output-
+	d
