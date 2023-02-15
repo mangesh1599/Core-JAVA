@@ -1070,3 +1070,53 @@ Output-
 			
 output-
 	false
+	
+	
+	
+26)start with
+	
+	
+	public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 ="Priyaabcd";
+		String s2 ="abcd";
+		myCode(s1,s2);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1,String s2) 
+	{
+		//write code here
+		if(s1.length()>=s2.length())
+		{
+			int j=0;
+			int cnt=0;
+			while(j<s2.length())
+			{
+				if(s1.charAt(j)!=s2.charAt(j))
+				{
+					cnt++;
+				}
+				j++;
+			}
+			if(cnt==0)
+			{
+				System.out.println(true);
+			}
+			else
+			{
+				System.out.println(false);
+			}
+		}
+		else
+		{
+			System.out.println(false);
+		}
+	}
+}
+			
+			
+			output-
+				false
