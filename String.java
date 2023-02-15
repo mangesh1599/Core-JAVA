@@ -1017,3 +1017,56 @@ Output-
 			
 Output-
 	d
+	
+	
+	
+25)ends with
+	
+	
+	public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 ="abcd";
+		String s2="efg";
+		myCode(s1,s2);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1,String s2) 
+	{
+		//write code here
+		int cnt=0;
+		if(s2.length()>s1.length())
+		{
+			System.out.println("false");
+		}
+		else
+		{
+			int j=s1.length()-1;
+			int k=s2.length()-1;
+			while(k>=0)
+			{
+				if(s1.charAt(j)!=s2.charAt(k))
+				{
+					cnt++;
+				}
+				j--;
+				k--;
+			}
+			if(cnt==0)
+			{
+				System.out.println("true");
+			}
+			else
+			{
+				System.out.println("false");
+			}
+		}
+	}
+}
+
+			
+			
+output-
+	false
