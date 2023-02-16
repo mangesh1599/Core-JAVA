@@ -1125,3 +1125,44 @@ public class MyClass
 		
 Output-
 	hefshine to welcome
+	
+	
+	
+28)	two strings lexicographically, ignoring casedifferences
+	
+	
+	public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 ="abcd";
+		String s2 ="abCd";
+		myCode(s1,s2);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1,String s2) 
+	{
+		//write code here
+		int diff=mycompare(s1,s2);
+		System.out.println(diff);
+	}
+	public static int mycompare(String s1,String s2)
+	{
+		s1=s1.toUpperCase();
+		s2=s2.toUpperCase();
+		for(int i=0;i<s1.length() && i<s2.length();i++)
+		{
+			if(s1.charAt(i)!=s2.charAt(i))
+			{
+				return s1.charAt(i)-s2.charAt(i);
+			}
+		}
+		return s1.length()-s2.length();
+	}
+}
+
+			
+			
+Output-
+	0
