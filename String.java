@@ -1166,3 +1166,62 @@ Output-
 			
 Output-
 	0
+	
+	
+	
+	
+29)implement Trim Method
+		
+	
+import java.util.Arrays;
+import java.util.Iterator;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 = "   ab   cd  ";
+		myCode(s1);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1) 
+	{
+		//write code here
+		int start=0;
+		int end=s1.length()-1;
+		while(true)
+		{
+			if(s1.charAt(start)==' ')
+			{
+				start++;
+			}
+			else
+			{
+				break;
+			}
+		}
+		while(true)
+		{
+			if(s1.charAt(end)==' ')
+			{
+				end--;
+			}
+			else
+			{
+				break;
+			}
+		}
+           System.out.println("start : "+start);
+           System.out.println("end : "+end);
+		for(int i=start; i<=end; i++)
+		{
+			System.out.print(s1.charAt(i));
+		}
+	}
+}
+
+						
+Output-
+start : 3
+end : 9
+ab   cd
