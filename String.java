@@ -1225,3 +1225,68 @@ Output-
 start : 3
 end : 9
 ab   cd
+	
+	
+	
+	
+30)implement index Of Method
+	
+		
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s1 ="abcd";
+		String s2="cd";
+		myCode(s1,s2);
+	}
+	//EndOfMainMethod
+	private static void myCode(String s1,String s2) 
+	{
+		//write code here
+		if(s2.length()==0)
+		{
+			System.out.println(0);
+		}
+		else
+		{
+			for(int i=0;i<s1.length();i++)
+			{
+				if(s1.charAt(i)==s2.charAt(0))
+				{
+					int j=i;
+					int k=0;
+					int cnt=0;
+					while(j<s1.length() && k<s2.length())
+					{
+						if(s1.charAt(j)==s2.charAt(k))
+						{
+							cnt++;
+						}
+						else
+						{
+							break;
+						}
+						j++;
+						k++;
+					}
+					if(cnt==s2.length())
+					{
+						System.out.println(i);
+						break;
+					}
+					else
+					{
+						System.out.println(-1);
+						break;
+					}
+				}
+			}
+		}
+	}
+}			
+			
+			
+output-
+	2
