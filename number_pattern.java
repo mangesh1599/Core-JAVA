@@ -1,7 +1,7 @@
-Number Patterns
+                                                                            Number Patterns
 						  
-				  Number pattern easy solution . This is helpful for you .  		  
-				----------------------------------------------------------
+				                         Number pattern easy solution . This is helpful for you .  		  
+				                         ----------------------------------------------------------
 				
 /*38
 
